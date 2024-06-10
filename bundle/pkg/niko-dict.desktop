@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=2.2
+Name=niko-dict
+Exec=/opt/niko-dict/niko-dict
+Icon=niko-dict
+Terminal=false
+Type=Application
+Categories=Other
+

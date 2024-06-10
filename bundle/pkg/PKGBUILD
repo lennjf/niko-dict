@@ -1,0 +1,17 @@
+pkgname=niko-dict
+pkgver=2.2
+pkgrel=1
+pkgdesc="dictionary"
+arch=('any')
+
+depends=("qt6-base")
+package() {
+  install -d "$pkgdir/opt/niko-dict"
+  install -d "$pkgdir/usr/share/applications/"
+  install -d "$pkgdir/usr/share/icons/hicolor/32x32/apps/"
+  install -d "$pkgdir/usr/share/icons/hicolor/128x128/apps/"
+  cp -rf "/repo/qt/qtProject/niko-dict/bundle/pkg/opt/" "$pkgdir"
+  install -m644 "/repo/qt/qtProject/niko-dict/bundle/pkg/niko-dict.desktop" "$pkgdir/usr/share/applications/"
+  install -m644 "/repo/qt/qtProject/niko-dict/bundle/pkg/32niko.png" "$pkgdir/usr/share/icons/hicolor/32x32/apps/niko-dict.png"
+  install -m644 "/repo/qt/qtProject/niko-dict/bundle/pkg/128niko.png" "$pkgdir/usr/share/icons/hicolor/128x128/apps/niko-dict.png"
+}
